@@ -24,7 +24,7 @@ public class GunScript : MonoBehaviour
     private void Update()
     {
        
-        if (Input.touchCount == 1)
+        if (Input.GetMouseButtonDown(0))
         {
             print(charge);
             if (charge > 0)
