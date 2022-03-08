@@ -15,10 +15,6 @@ public class filters : MonoBehaviour
      {
          gameObject.GetComponent<Renderer>().material.color = new Color(1.0f, 0.0f, 0.0f, 0.4f);
      }
-     if (Input.GetKeyDown(KeyCode.W))
-     {
-         gameObject.GetComponent<Renderer>().material.color = new Color(0.0f, 1.0f, 0.0f, 0.4f);
-     }
      if (Input.GetKeyDown(KeyCode.E))
      {
          gameObject.GetComponent<Renderer>().material.color = new Color(0.0f, 0.0f, 1.0f, 0.4f);;
