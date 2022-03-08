@@ -23,7 +23,7 @@ public class GunScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             print(charge);
             if (charge > 0)
