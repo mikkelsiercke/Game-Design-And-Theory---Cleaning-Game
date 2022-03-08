@@ -13,9 +13,9 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("water"))
+        if (collision.gameObject.tag == "water")
         {
-            Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>());
+            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
         }
     }
 }
