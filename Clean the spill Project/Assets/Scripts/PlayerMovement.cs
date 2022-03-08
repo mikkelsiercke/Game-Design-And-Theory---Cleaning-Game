@@ -17,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
 
         //Attach movement + controllable speed to specified controller in inspector
         controller.Move(move * moveSpeed * Time.deltaTime);
+
+
+
+
     }
 
 }
