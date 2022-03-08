@@ -14,7 +14,7 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         //Allows hiding the mouse curser during play
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
