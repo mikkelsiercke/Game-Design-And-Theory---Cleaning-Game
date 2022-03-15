@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GunScript : MonoBehaviour
@@ -9,36 +6,71 @@ public class GunScript : MonoBehaviour
     public float range = 100f;
 
     public Camera fpsCamera;
-    
+
     public GameObject prefab;
     public Rigidbody projectile;
     public float speed = 6;
     public int charge = 50;
+    public float chargeWaitInSeconds = 0.5f;
+    public float deChargeWaitInSeconds = 0.5f;
     private int chargeCopy;
-    
+
+    public AudioSource gunSound;
+
+    public bool shooting;
+
     private void Start()
     {
         chargeCopy = charge;
+        InvokeRepeating(nameof(DeChargeGun), 0f, deChargeWaitInSeconds);
+        InvokeRepeating(nameof(ChargeGun), 0f, chargeWaitInSeconds);
     }
 
     private void Update()
     {
         if (Input.GetMouseButton(0))
         {
-            print(charge);
+            shooting = true;
             if (charge > 0)
-            { 
+            {
+                if (!gunSound.isPlaying)
+                    gunSound.Play();
                 ShootObject();
-                charge -= 1;
+            }
+            else
+            {
+                if (gunSound.isPlaying)
+                    gunSound.Pause();
             }
         }
         else
         {
-            if (charge < chargeCopy)
-            {
-                charge += 1;
-            }
+            if (gunSound.isPlaying)
+                gunSound.Pause();
+            shooting = false;
         }
+    }
+
+    private void DeChargeGun()
+    {
+        if (!shooting) return;
+
+        if (charge > 0)
+            charge -= 1;
+    }
+
+    private void ChargeGun()
+    {
+        if (shooting) return;
+
+        if (charge < chargeCopy)
+            charge += 1;
+    }
+
+    private void ShootObject()
+    {
+        Rigidbody p = Instantiate(projectile, transform.position, fpsCamera.transform.rotation);
+        p.velocity = transform.forward * speed;
     }
 
     private void Shoot()
@@ -51,14 +83,8 @@ public class GunScript : MonoBehaviour
             Target target = hit.transform.GetComponent<Target>();
             if (target != null)
             {
-                target.TakeDamage(damage);
+                // target.TakeDamage(damage);
             }
         }
-    }
-
-    private void ShootObject()
-    {
-        Rigidbody p = Instantiate(projectile, transform.position, transform.rotation);
-        p.velocity = transform.forward * speed;
     }
 }
