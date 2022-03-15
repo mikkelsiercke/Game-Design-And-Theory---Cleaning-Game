@@ -13,6 +13,7 @@ public class GunScript : MonoBehaviour
     public int charge = 50;
     public float chargeWaitInSeconds = 0.5f;
     public float deChargeWaitInSeconds = 0.5f;
+    public GameObject bulletSpawn;
     private int chargeCopy;
 
     public AudioSource gunSound;
@@ -69,8 +70,8 @@ public class GunScript : MonoBehaviour
 
     private void ShootObject()
     {
-        Rigidbody p = Instantiate(projectile, transform.position, fpsCamera.transform.rotation);
-        p.velocity = transform.forward * speed;
+        Rigidbody p = Instantiate(projectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
+        p.velocity = -transform.forward * speed;
     }
 
     private void Shoot()
