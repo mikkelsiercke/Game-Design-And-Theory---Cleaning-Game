@@ -1,32 +1,37 @@
+using System;
 using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    public float health = 50f;
+    public Material oilMaterial;
+    public Material cleanMaterial;
+    public Material overCleanMaterial;
 
-    public void TakeDamage(float amount)
-    {
-        health -= amount;
-        if (health <= 0f)
-        {
-            Die();
-        }
-    }
+    public float health = 2f;
+    public float damage = 0.01f;
+    private float initialHealt;
 
-    private void Die()
+    private Renderer _renderer;
+
+    private void Start()
     {
-        Destroy(gameObject);
+        _renderer = gameObject.GetComponent<Renderer>();
+        initialHealt = health;
     }
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("water"))
+        if (!collision.gameObject.CompareTag("water")) return;
+        
+        health -= damage;
+        
+        if (health <= initialHealt && health > initialHealt / 2)
         {
-            health -= 10;
-            if (health <= 0f)
-            {
-                Die();
-            }
+            _renderer.material.Lerp(cleanMaterial, oilMaterial, health / initialHealt);
+        }
+        else if (health <= initialHealt / 2)
+        {
+            _renderer.material.Lerp(overCleanMaterial, cleanMaterial, health / initialHealt);
         }
     }
 }
