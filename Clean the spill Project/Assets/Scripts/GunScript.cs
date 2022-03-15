@@ -16,6 +16,7 @@ public class GunScript : MonoBehaviour
     public float speed = 6;
     public int charge = 50;
     public float chargeWaitInSeconds = 0.5f;
+    public float deChargeWaitInSeconds = 0.5f;
     private int chargeCopy;
 
     private bool shooting;
@@ -23,7 +24,7 @@ public class GunScript : MonoBehaviour
     private void Start()
     {
         chargeCopy = charge;
-        InvokeRepeating(nameof(DeChargeGun), 0f, chargeWaitInSeconds);
+        InvokeRepeating(nameof(DeChargeGun), 0f, deChargeWaitInSeconds);
         InvokeRepeating(nameof(ChargeGun), 0f, chargeWaitInSeconds);
     }
 
