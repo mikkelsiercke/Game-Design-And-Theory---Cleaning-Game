@@ -16,5 +16,10 @@ public class Scene_Changer : MonoBehaviour
     } 
      public void Scene4() {  
         SceneManager.LoadScene(3);  
-    } 
+    }
+
+     public void ChangeScene(int index)
+     {
+         SceneManager.LoadScene(index);
+     }
 }
