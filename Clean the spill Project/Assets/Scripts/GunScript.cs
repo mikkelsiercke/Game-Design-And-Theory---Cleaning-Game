@@ -1,4 +1,8 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Object = System.Object;
 
 public class GunScript : MonoBehaviour
 {
@@ -12,18 +16,14 @@ public class GunScript : MonoBehaviour
     public float speed = 6;
     public int charge = 50;
     public float chargeWaitInSeconds = 0.5f;
-    public float deChargeWaitInSeconds = 0.5f;
-    public GameObject bulletSpawn;
     private int chargeCopy;
 
-    public AudioSource gunSound;
-
-    public bool shooting;
+    private bool shooting;
 
     private void Start()
     {
         chargeCopy = charge;
-        InvokeRepeating(nameof(DeChargeGun), 0f, deChargeWaitInSeconds);
+        InvokeRepeating(nameof(DeChargeGun), 0f, chargeWaitInSeconds);
         InvokeRepeating(nameof(ChargeGun), 0f, chargeWaitInSeconds);
     }
 
@@ -33,21 +33,10 @@ public class GunScript : MonoBehaviour
         {
             shooting = true;
             if (charge > 0)
-            {
-                if (!gunSound.isPlaying)
-                    gunSound.Play();
                 ShootObject();
-            }
-            else
-            {
-                if (gunSound.isPlaying)
-                    gunSound.Pause();
-            }
         }
         else
         {
-            if (gunSound.isPlaying)
-                gunSound.Pause();
             shooting = false;
         }
     }
@@ -55,23 +44,17 @@ public class GunScript : MonoBehaviour
     private void DeChargeGun()
     {
         if (!shooting) return;
-
+        
         if (charge > 0)
-            charge -= 1;
+                charge -= 1;
     }
 
     private void ChargeGun()
     {
         if (shooting) return;
-
+        
         if (charge < chargeCopy)
-            charge += 3;
-    }
-
-    private void ShootObject()
-    {
-        Rigidbody p = Instantiate(projectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
-        p.velocity = -transform.forward * speed;
+                charge += 1;
     }
 
     private void Shoot()
@@ -87,5 +70,11 @@ public class GunScript : MonoBehaviour
                 // target.TakeDamage(damage);
             }
         }
+    }
+
+    private void ShootObject()
+    {
+       Rigidbody p = Instantiate(projectile, transform.position, fpsCamera.transform.rotation);
+       p.velocity = transform.forward * speed;
     }
 }

@@ -11,17 +11,17 @@ public class WindHit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("water")) return;
-
-        print("Hit!");
-        var r = other.gameObject.GetComponent<Rigidbody>();
-        if (isLeft)
+        if (other.gameObject.CompareTag("water"))
         {
-            r.AddForce(new Vector3(1, 0, 0) * windForce);
-        }
-        else if (isRight)
-        {
-            r.AddForce(new Vector3(-1, 0, 0) * windForce);
+            print("Hit!");
+            var r = other.gameObject.GetComponent<Rigidbody>();
+            if (isLeft)
+            {
+                r.AddForce(new Vector3(1, 0, 0) * windForce);
+            } else if (isRight)
+            {
+                r.AddForce(new Vector3(-1, 0, 0) * windForce);
+            }
         }
     }
 }

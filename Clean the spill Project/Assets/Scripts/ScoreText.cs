@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class ScoreText : MonoBehaviour
 {
     public GunScript gunScript;
-    public Slider slider;
+    private Text scoreText;
     
     // Start is called before the first frame update
     void Start()
     {
-        slider.maxValue = gunScript.charge;
+        scoreText = gameObject.GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        slider.value = gunScript.charge;
+        scoreText.text = gunScript.charge.ToString();
     }
 }
