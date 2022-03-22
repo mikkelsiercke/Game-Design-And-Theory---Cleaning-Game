@@ -39,7 +39,7 @@ public class Target : MonoBehaviour
 
         }
                         
-        if (health <= initialHealt / 1.5f && health >= initialHealt / 2f && isCleaned == false){ 
+        if (health <= initialHealt / 1.5f && isCleaned == false){ 
 
             isCleaned = true;
             Scoreboard.scoreValue += 10;
