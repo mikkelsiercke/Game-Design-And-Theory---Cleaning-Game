@@ -9,6 +9,7 @@ public class GunScript : MonoBehaviour
 
     public GameObject prefab;
     public Rigidbody projectile;
+    public Rigidbody oilProjectile;
     public float speed = 6;
     public int charge = 50;
     public float chargeWaitInSeconds = 0.5f;
@@ -19,6 +20,8 @@ public class GunScript : MonoBehaviour
     public AudioSource gunSound;
 
     public bool shooting;
+
+    public int ammoType;
 
     private void Start()
     {
@@ -50,6 +53,16 @@ public class GunScript : MonoBehaviour
                 gunSound.Pause();
             shooting = false;
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("Ammo is Standard");
+            ammoType = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Debug.Log("Ammo is Anti-Oil");
+            ammoType = 2;
+        }
     }
 
     private void DeChargeGun()
@@ -70,8 +83,16 @@ public class GunScript : MonoBehaviour
 
     private void ShootObject()
     {
-        Rigidbody p = Instantiate(projectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
+        if (ammoType == 1)
+        {
+            Rigidbody p = Instantiate(projectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
         p.velocity = -transform.forward * speed;
+        }
+        else if (ammoType == 2)
+        {
+            Rigidbody p = Instantiate(oilProjectile, transform.position, transform.rotation);
+            p.velocity = transform.forward * speed;
+        }
     }
 
     private void Shoot()
