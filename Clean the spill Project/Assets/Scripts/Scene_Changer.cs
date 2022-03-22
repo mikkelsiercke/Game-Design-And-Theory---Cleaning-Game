@@ -8,13 +8,18 @@ public class Scene_Changer : MonoBehaviour
     public void Scene1() {  
         SceneManager.LoadScene(0);  
     }  
-    public void Scene2() {  
+    public void Intro() {  
         SceneManager.LoadScene(1);  
     }  
-    public void Scene3() {  
+    public void Level1() {  
         SceneManager.LoadScene(2);  
     } 
-     public void Scene4() {  
+     public void Level2() {  
         SceneManager.LoadScene(3);  
-    } 
+    }
+
+     public void ChangeScene(int index)
+     {
+         SceneManager.LoadScene(index);
+     }
 }
