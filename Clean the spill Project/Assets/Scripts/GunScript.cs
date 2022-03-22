@@ -86,12 +86,12 @@ public class GunScript : MonoBehaviour
         if (ammoType == 1)
         {
             Rigidbody p = Instantiate(projectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
-        p.velocity = -transform.forward * speed;
+            p.velocity = -transform.forward * speed;
         }
         else if (ammoType == 2)
         {
-            Rigidbody p = Instantiate(oilProjectile, transform.position, transform.rotation);
-            p.velocity = transform.forward * speed;
+            Rigidbody p = Instantiate(oilProjectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
+            p.velocity = -transform.forward * speed;
         }
     }
 
