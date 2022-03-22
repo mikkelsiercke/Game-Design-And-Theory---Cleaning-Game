@@ -17,7 +17,7 @@ public class TargetBomb : MonoBehaviour
     {
         for (int i = 0; i < spillAmount; i++)
         {
-            var randomSpeed = Random.Range(1, 5);
+            var randomSpeed = Random.Range(1, 3);
             Rigidbody p = Instantiate(oilSpill, gameObject.transform.position, gameObject.transform.rotation);
             p.velocity = transform.forward * randomSpeed;
         }

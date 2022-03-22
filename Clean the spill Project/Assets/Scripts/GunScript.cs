@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class GunScript : MonoBehaviour
 {
-    public float damage = 10f;
     public float range = 100f;
 
     public Camera fpsCamera;
 
     public GameObject prefab;
-    public Rigidbody projectile;
+ public Rigidbody projectile;
     public Rigidbody oilProjectile;
     public float speed = 6;
     public int charge = 50;
