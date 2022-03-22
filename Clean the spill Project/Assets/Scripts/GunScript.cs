@@ -1,29 +1,36 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Object = System.Object;
 
 public class GunScript : MonoBehaviour
 {
-    public float damage = 10f;
     public float range = 100f;
 
     public Camera fpsCamera;
 
     public GameObject prefab;
-    public Rigidbody projectile;
+    public GameObject projectilePrefab;
+    public GameObject oilProjectilePrefab;
+    private Rigidbody projectile;
+    private Rigidbody oilProjectile;
     public float speed = 6;
     public int charge = 50;
     public float chargeWaitInSeconds = 0.5f;
+    public float deChargeWaitInSeconds = 0.5f;
+    public GameObject bulletSpawn;
     private int chargeCopy;
 
-    private bool shooting;
+    public AudioSource gunSound;
+
+    public bool shooting;
+
+    public int ammoType;
 
     private void Start()
     {
+        projectile = projectilePrefab.GetComponentInChildren<Rigidbody>();
+        oilProjectile = oilProjectilePrefab.GetComponentInChildren<Rigidbody>();
+        
         chargeCopy = charge;
-        InvokeRepeating(nameof(DeChargeGun), 0f, chargeWaitInSeconds);
+        InvokeRepeating(nameof(DeChargeGun), 0f, deChargeWaitInSeconds);
         InvokeRepeating(nameof(ChargeGun), 0f, chargeWaitInSeconds);
     }
 
@@ -33,28 +40,63 @@ public class GunScript : MonoBehaviour
         {
             shooting = true;
             if (charge > 0)
+            {
+                if (!gunSound.isPlaying)
+                    gunSound.Play();
                 ShootObject();
+            }
+            else
+            {
+                if (gunSound.isPlaying)
+                    gunSound.Pause();
+            }
         }
         else
         {
+            if (gunSound.isPlaying)
+                gunSound.Pause();
             shooting = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("Ammo is Standard");
+            ammoType = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Debug.Log("Ammo is Anti-Oil");
+            ammoType = 1;
         }
     }
 
     private void DeChargeGun()
     {
         if (!shooting) return;
-        
+
         if (charge > 0)
-                charge -= 1;
+            charge -= 1;
     }
 
     private void ChargeGun()
     {
         if (shooting) return;
-        
+
         if (charge < chargeCopy)
-                charge += 1;
+            charge += 1;
+    }
+
+    private void ShootObject()
+    {
+        if (ammoType == 0)
+        {
+            Rigidbody p = Instantiate(projectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
+            p.velocity = -transform.forward * speed;
+        }
+        else if (ammoType == 1)
+        {
+            Rigidbody p = Instantiate(oilProjectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
+            p.velocity = -transform.forward * speed;
+        }
     }
 
     private void Shoot()
@@ -70,11 +112,5 @@ public class GunScript : MonoBehaviour
                 // target.TakeDamage(damage);
             }
         }
-    }
-
-    private void ShootObject()
-    {
-       Rigidbody p = Instantiate(projectile, transform.position, fpsCamera.transform.rotation);
-       p.velocity = transform.forward * speed;
     }
 }

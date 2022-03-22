@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - water
+  - oil
+  - target
+  - oilGun
   layers:
   - Default
   - TransparentFX
@@ -14,8 +17,8 @@ TagManager:
   - UI
   - Player
   - Projectiles
-  - 
-  - 
+  - oil
+  - oilGun
   - 
   - 
   - 
