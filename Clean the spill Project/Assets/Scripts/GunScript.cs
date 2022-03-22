@@ -56,12 +56,12 @@ public class GunScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("Ammo is Standard");
-            ammoType = 1;
+            ammoType = 0;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Debug.Log("Ammo is Anti-Oil");
-            ammoType = 2;
+            ammoType = 1;
         }
     }
 
@@ -83,12 +83,12 @@ public class GunScript : MonoBehaviour
 
     private void ShootObject()
     {
-        if (ammoType == 1)
+        if (ammoType == 0)
         {
             Rigidbody p = Instantiate(projectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
             p.velocity = -transform.forward * speed;
         }
-        else if (ammoType == 2)
+        else if (ammoType == 1)
         {
             Rigidbody p = Instantiate(oilProjectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
             p.velocity = -transform.forward * speed;
