@@ -7,8 +7,10 @@ public class GunScript : MonoBehaviour
     public Camera fpsCamera;
 
     public GameObject prefab;
- public Rigidbody projectile;
-    public Rigidbody oilProjectile;
+    public GameObject projectilePrefab;
+    public GameObject oilProjectilePrefab;
+    private Rigidbody projectile;
+    private Rigidbody oilProjectile;
     public float speed = 6;
     public int charge = 50;
     public float chargeWaitInSeconds = 0.5f;
@@ -24,6 +26,9 @@ public class GunScript : MonoBehaviour
 
     private void Start()
     {
+        projectile = projectilePrefab.GetComponentInChildren<Rigidbody>();
+        oilProjectile = oilProjectilePrefab.GetComponentInChildren<Rigidbody>();
+        
         chargeCopy = charge;
         InvokeRepeating(nameof(DeChargeGun), 0f, deChargeWaitInSeconds);
         InvokeRepeating(nameof(ChargeGun), 0f, chargeWaitInSeconds);

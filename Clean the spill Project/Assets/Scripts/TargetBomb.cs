@@ -7,6 +7,7 @@ public class TargetBomb : MonoBehaviour
     public GameObject oilSpillPreFab;
     private Rigidbody oilSpill;
     public int spillAmount = 10;
+    public AudioManager audioManager;
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class TargetBomb : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("water")) return;
+        audioManager.PlayExplosionSound();
         RigidExplode();
         Destroy(gameObject);
     }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8478530342969500530}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 2099090328484443282}
   - component: {fileID: 7109206691166910471}
   - component: {fileID: 8228023726877682931}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Cube
   m_TagString: water
   m_Icon: {fileID: 0}

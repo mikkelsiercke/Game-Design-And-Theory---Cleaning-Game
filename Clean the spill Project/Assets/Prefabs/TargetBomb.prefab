@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oilSpillPreFab: {fileID: 6865321531134076189, guid: 7e9e5c726af2cc140a7d7744f7c447ef, type: 3}
   spillAmount: 50
+  audioManager: {fileID: 0}

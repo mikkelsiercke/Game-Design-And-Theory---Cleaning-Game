@@ -8,8 +8,8 @@ public class TargetOil : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("water") || collision.gameObject.CompareTag("target"))
         {
+            print("hit");
             Destroy(gameObject);
         }
-        
     }
 }
