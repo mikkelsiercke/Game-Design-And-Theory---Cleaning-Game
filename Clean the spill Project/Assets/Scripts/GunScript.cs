@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GunScript : MonoBehaviour
@@ -21,6 +22,8 @@ public class GunScript : MonoBehaviour
     public AudioSource gunSound;
 
     public bool shooting;
+    public float shootWaitTime = 0.1f;
+    private bool canShoot = true;
 
     public int ammoType;
 
@@ -28,7 +31,7 @@ public class GunScript : MonoBehaviour
     {
         projectile = projectilePrefab.GetComponentInChildren<Rigidbody>();
         oilProjectile = oilProjectilePrefab.GetComponentInChildren<Rigidbody>();
-        
+
         chargeCopy = charge;
         InvokeRepeating(nameof(DeChargeGun), 0f, deChargeWaitInSeconds);
         InvokeRepeating(nameof(ChargeGun), 0f, chargeWaitInSeconds);
@@ -57,6 +60,7 @@ public class GunScript : MonoBehaviour
                 gunSound.Pause();
             shooting = false;
         }
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("Ammo is Standard");
@@ -87,16 +91,29 @@ public class GunScript : MonoBehaviour
 
     private void ShootObject()
     {
-        if (ammoType == 0)
+        if (ammoType == 0 && canShoot)
         {
-            Rigidbody p = Instantiate(projectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
-            p.velocity = -transform.forward * speed;
+            ShootWater();
+            canShoot = false;
+            StartCoroutine(Wait(shootWaitTime));
         }
         else if (ammoType == 1)
         {
             Rigidbody p = Instantiate(oilProjectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
             p.velocity = -transform.forward * speed;
         }
+    }
+
+    private void ShootWater()
+    {
+        Rigidbody p = Instantiate(projectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
+        p.velocity = -transform.forward * speed;
+    }
+
+    IEnumerator Wait(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        canShoot = true;
     }
 
     private void Shoot()
