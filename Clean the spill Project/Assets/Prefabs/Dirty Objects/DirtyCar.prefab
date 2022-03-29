@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 2685534674458831732}
   - component: {fileID: 8785579278950128445}
   - component: {fileID: 101310775560569667}
-  - component: {fileID: 195849457035644536}
   m_Layer: 0
   m_Name: Wheel
   m_TagString: Untagged
@@ -163,20 +162,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &195849457035644536
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800944544529170528}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2309305249758762421, guid: a41bc5d124cbf3142ad868b84452930a, type: 3}
 --- !u!1 &817616258472122150
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +187,7 @@ Transform:
   m_GameObject: {fileID: 817616258472122150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9044831796442968176}
   - {fileID: 2685534674458831732}
@@ -500,9 +485,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
+  oilMaterial: {fileID: 2100000, guid: 7c7661bca701dcd4f8057912958d9b61, type: 2}
+  cleanMaterial: {fileID: 2100000, guid: 9f5ba507544f0bc40acefc670d64fe31, type: 2}
+  overCleanMaterial: {fileID: 2100000, guid: e86f281a81b743c4e8e0b7f6e595d605, type: 2}
   health: 5
   damage: 0.01
   oilDamage: 0.5
