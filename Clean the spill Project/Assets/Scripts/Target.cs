@@ -21,6 +21,7 @@ public class Target : MonoBehaviour
     {
         _renderer = gameObject.GetComponent<Renderer>();
         initialHealt = health;
+        _renderer.material = oilMaterial;
     }
 
     private void OnCollisionEnter(Collision collision)
