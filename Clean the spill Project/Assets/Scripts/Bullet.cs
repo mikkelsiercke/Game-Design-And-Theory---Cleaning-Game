@@ -10,12 +10,4 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject, bulletLife);
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("water"))
-        {
-            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
-        }
-    }
 }

@@ -7,6 +7,7 @@ public class TargetBomb : MonoBehaviour
     public GameObject oilSpillPreFab;
     private Rigidbody oilSpill;
     public int spillAmount = 10;
+    public AudioManager audioManager;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class TargetBomb : MonoBehaviour
     {
         for (int i = 0; i < spillAmount; i++)
         {
-            var randomSpeed = Random.Range(1, 5);
+            var randomSpeed = Random.Range(1, 3);
             Rigidbody p = Instantiate(oilSpill, gameObject.transform.position, gameObject.transform.rotation);
             p.velocity = transform.forward * randomSpeed;
         }
@@ -26,6 +27,7 @@ public class TargetBomb : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("water")) return;
+        audioManager.PlayExplosionSound();
         RigidExplode();
         Destroy(gameObject);
     }
