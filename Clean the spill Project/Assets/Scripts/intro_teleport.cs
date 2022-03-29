@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class intro_teleport : MonoBehaviour
 {
-void OnTriggerEnter(Collider gameObjectInformation)
- {
- if (gameObjectInformation.gameObject.name == "Character")
+    void OnTriggerEnter(Collider gameObjectInformation)
+    {
+        if (gameObjectInformation.gameObject.name == "Character")
         {
             Debug.Log("entered collision");
             SceneManager.LoadScene(3);
         }
- }
+    }
 }

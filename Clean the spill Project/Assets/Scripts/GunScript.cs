@@ -82,7 +82,7 @@ public class GunScript : MonoBehaviour
         if (shooting) return;
 
         if (charge < chargeCopy)
-            charge += 5;
+            charge += 1;
     }
 
     private void ShootObject()
