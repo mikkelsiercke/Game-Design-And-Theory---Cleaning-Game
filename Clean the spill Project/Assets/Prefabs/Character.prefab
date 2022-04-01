@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7124504310559486491}
   - component: {fileID: 602988045105703916}
+  - component: {fileID: 8115877993724857559}
   m_Layer: 0
   m_Name: PP_colorFilter
   m_TagString: Untagged
@@ -43,6 +44,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f24b922758a71a40b236a7a8de8ed4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  filter: 0
+  gameObject: {fileID: 0}
+--- !u!114 &8115877993724857559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4194570192628796740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 5ac97e9a7461b2a43ad65976110c18e9, type: 2}
+  isGlobal: 0
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &6068810823429381829
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +187,7 @@ MonoBehaviour:
   bulletSpawn: {fileID: 0}
   gunSound: {fileID: 0}
   shooting: 0
+  shootWaitTime: 0.1
   ammoType: 0
 --- !u!114 &7522116416472747483
 MonoBehaviour:

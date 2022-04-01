@@ -8,6 +8,7 @@ TagManager:
   - oil
   - target
   - oilGun
+  - CG_Filter
   layers:
   - Default
   - TransparentFX

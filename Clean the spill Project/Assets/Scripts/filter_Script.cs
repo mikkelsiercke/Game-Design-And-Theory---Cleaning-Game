@@ -31,6 +31,7 @@ public float saturation = 5f;
         //If statement der aktiverer filtret
         if(Input.GetKeyDown("space") && filter == false){
             //Sætter Vignetten til 1 samt sætter boolean der kontrollerer filt er til true
+
            _Vignette.intensity.value = 1;
             filter = true;
             //colorFilter.enable.value = true;
