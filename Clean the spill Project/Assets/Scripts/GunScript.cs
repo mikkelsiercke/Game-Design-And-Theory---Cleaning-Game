@@ -1,31 +1,38 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GunScript : MonoBehaviour
 {
-    public float range = 100f;
-
-    public Camera fpsCamera;
-
-    public GameObject prefab;
+    [Header("Projectile Prefabs")]
     public GameObject projectilePrefab;
     public GameObject oilProjectilePrefab;
     private Rigidbody projectile;
     private Rigidbody oilProjectile;
-    public float speed = 6;
-    public int charge = 50;
-    public float chargeWaitInSeconds = 0.5f;
-    public float deChargeWaitInSeconds = 0.5f;
-    public GameObject bulletSpawn;
-    private int chargeCopy;
-
-    public AudioSource gunSound;
-
-    public bool shooting;
+    [Header("Projectile Spray Settings")]
+    [Tooltip("This changes how often a projectile is instantiated in sec.")]
     public float shootWaitTime = 0.1f;
+    [Tooltip("How far does the projectile shoot")]
+    public float range = 100f;
+    [Tooltip("How fast are the projectile")]
+    public float speed = 6;
+    [Tooltip("How many projectiles can you shoot in one charge")]
+    public int charge = 50; private int chargeCopy;
+    private float chargeWaitInSeconds = 0.5f;
+    private float deChargeWaitInSeconds = 0.5f;
+    
+    [Header("")]
+    public Camera fpsCamera;
+    [FormerlySerializedAs("bulletSpawn")] 
+    public GameObject bulletSpawnTransform;
+    [FormerlySerializedAs("gunSound")]
+    public AudioSource spraySound;
+    
+    // Private variables
+    [NonSerialized] public bool shooting;
     private bool canShoot = true;
-
-    public int ammoType;
+    private int ammoType;
 
     private void Start()
     {
@@ -33,6 +40,7 @@ public class GunScript : MonoBehaviour
         oilProjectile = oilProjectilePrefab.GetComponentInChildren<Rigidbody>();
 
         chargeCopy = charge;
+        
         InvokeRepeating(nameof(DeChargeGun), 0f, deChargeWaitInSeconds);
         InvokeRepeating(nameof(ChargeGun), 0f, chargeWaitInSeconds);
     }
@@ -44,20 +52,21 @@ public class GunScript : MonoBehaviour
             shooting = true;
             if (charge > 0)
             {
-                if (!gunSound.isPlaying)
-                    gunSound.Play();
+                if (!spraySound.isPlaying)
+                    spraySound.Play();
+                
                 ShootObject();
             }
             else
             {
-                if (gunSound.isPlaying)
-                    gunSound.Pause();
+                if (spraySound.isPlaying)
+                    spraySound.Pause();
             }
         }
         else
         {
-            if (gunSound.isPlaying)
-                gunSound.Pause();
+            if (spraySound.isPlaying)
+                spraySound.Pause();
             shooting = false;
         }
 
@@ -99,14 +108,14 @@ public class GunScript : MonoBehaviour
         }
         else if (ammoType == 1)
         {
-            Rigidbody p = Instantiate(oilProjectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
+            Rigidbody p = Instantiate(oilProjectile, bulletSpawnTransform.transform.position, fpsCamera.transform.rotation);
             p.velocity = -transform.forward * speed;
         }
     }
 
     private void ShootWater()
     {
-        Rigidbody p = Instantiate(projectile, bulletSpawn.transform.position, fpsCamera.transform.rotation);
+        Rigidbody p = Instantiate(projectile, bulletSpawnTransform.transform.position, fpsCamera.transform.rotation);
         p.velocity = -transform.forward * speed;
     }
 

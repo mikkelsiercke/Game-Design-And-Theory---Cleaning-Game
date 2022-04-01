@@ -47,7 +47,7 @@ public class Target : MonoBehaviour
         {
             _renderer.material.Lerp(cleanMaterial, oilMaterial, health / initialHealt);
         }
-        else if (health <= initialHealt / 2)
+        else if (health < initialHealt / 2)
         {
             _renderer.material.Lerp(overCleanMaterial, cleanMaterial, health / initialHealt);
         }

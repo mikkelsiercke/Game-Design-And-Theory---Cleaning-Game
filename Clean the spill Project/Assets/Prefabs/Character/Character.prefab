@@ -66,6 +66,10 @@ PrefabInstance:
       value: water
       objectReference: {fileID: 0}
     - target: {fileID: 6068810823627556224, guid: 4b8d6061d93f33541993080f2801d826, type: 3}
+      propertyPath: m_Height
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6068810823627556224, guid: 4b8d6061d93f33541993080f2801d826, type: 3}
       propertyPath: m_SlopeLimit
       value: 43.81
       objectReference: {fileID: 0}
@@ -361,4 +365,5 @@ MonoBehaviour:
   bulletSpawn: {fileID: 7758531619854004594}
   gunSound: {fileID: 7758531619356770020}
   shooting: 0
+  shootWaitTime: 0.1
   ammoType: 0
