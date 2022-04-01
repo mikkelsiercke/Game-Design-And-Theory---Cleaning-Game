@@ -112,7 +112,7 @@ MonoBehaviour:
   oilMaterial: {fileID: 2100000, guid: 897f9c9c27c28bc459c20fbd71312e69, type: 2}
   cleanMaterial: {fileID: 2100000, guid: 208f5efebaf8324449598e59885816bf, type: 2}
   overCleanMaterial: {fileID: 2100000, guid: 3ce5217d3408c3846898f66a7c62313c, type: 2}
-  health: 2
+  health: 1
   damage: 0.01
   oilDamage: 0.5
 --- !u!1 &8040749746466327954

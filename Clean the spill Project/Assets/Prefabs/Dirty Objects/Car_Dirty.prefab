@@ -112,7 +112,7 @@ MonoBehaviour:
   oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
   cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
   overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
-  health: 2
+  health: 1
   damage: 0.01
   oilDamage: 0.5
 --- !u!1 &3741904425007204484
@@ -227,7 +227,7 @@ MonoBehaviour:
   oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
   cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
   overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
-  health: 2
+  health: 1
   damage: 0.01
   oilDamage: 0.5
 --- !u!1 &4472093991896475660
@@ -377,7 +377,7 @@ MonoBehaviour:
   oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
   cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
   overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
-  health: 2
+  health: 1
   damage: 0.01
   oilDamage: 0.5
 --- !u!1 &5399947628548201858
@@ -492,7 +492,7 @@ MonoBehaviour:
   oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
   cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
   overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
-  health: 2
+  health: 1
   damage: 0.01
   oilDamage: 0.5
 --- !u!1 &7316993640863204086
@@ -607,6 +607,6 @@ MonoBehaviour:
   oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
   cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
   overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
-  health: 2
+  health: 1
   damage: 0.01
   oilDamage: 0.5
