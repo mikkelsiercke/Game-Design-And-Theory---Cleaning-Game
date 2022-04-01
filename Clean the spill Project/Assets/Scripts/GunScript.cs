@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GunScript : MonoBehaviour
 {
-    public float range = 100f;
+    public float range = 130f;
 
     public Camera fpsCamera;
 
@@ -12,9 +12,9 @@ public class GunScript : MonoBehaviour
     public GameObject oilProjectilePrefab;
     private Rigidbody projectile;
     private Rigidbody oilProjectile;
-    public float speed = 6;
-    public int charge = 50;
-    public float chargeWaitInSeconds = 0.5f;
+    public float speed = 12;
+    public int charge = 200;
+    public float chargeWaitInSeconds = 0.2f;
     public float deChargeWaitInSeconds = 0.5f;
     public GameObject bulletSpawn;
     private int chargeCopy;
