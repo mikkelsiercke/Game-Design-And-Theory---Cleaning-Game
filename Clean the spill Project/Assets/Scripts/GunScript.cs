@@ -10,7 +10,6 @@ public class GunScript : MonoBehaviour
     public GameObject oilProjectilePrefab;
     private Rigidbody projectile;
     private Rigidbody oilProjectile;
-    
     [Header("Projectile Spray Settings")]
     [Tooltip("This changes how often a projectile is instantiated in sec.")]
     public float shootWaitTime = 0.1f;
