@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filter: 0
-  gameObject: {fileID: 0}
+  CG_Filter: {fileID: 0}
 --- !u!114 &8115877993724857559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,20 +175,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06a3b52285ebfc4e837ffa97a8ca225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 2888194127970106588, guid: ecfb41403dce4314f92a63f4ec6b9de9, type: 3}
+  ARProjectilePrefab: {fileID: 9197734033096125232, guid: 2fbea2d0fab88ba49b552ec13bcf6a24, type: 3}
+  oilProjectilePrefab: {fileID: 8163587019443360426, guid: de9cfc4f038c7eb4b9248e7603861ed8, type: 3}
+  shootWaitTime: 0.1
   range: 100
-  fpsCamera: {fileID: 6068810823429381824}
-  prefab: {fileID: 0}
-  projectilePrefab: {fileID: 0}
-  oilProjectilePrefab: {fileID: 0}
   speed: 20
   charge: 50
-  chargeWaitInSeconds: 0.5
-  deChargeWaitInSeconds: 0.5
-  bulletSpawn: {fileID: 0}
-  gunSound: {fileID: 0}
-  shooting: 0
-  shootWaitTime: 0.1
-  ammoType: 0
+  fpsCamera: {fileID: 6068810823429381824}
+  bulletSpawnTransform: {fileID: 0}
+  spraySound: {fileID: 0}
 --- !u!114 &7522116416472747483
 MonoBehaviour:
   m_ObjectHideFlags: 0
