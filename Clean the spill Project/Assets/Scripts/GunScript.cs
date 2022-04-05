@@ -12,6 +12,7 @@ public class GunScript : MonoBehaviour
     private Rigidbody projectile;
     private Rigidbody ARProjectile;
     private Rigidbody oilProjectile;
+    
     [Header("Projectile Spray Settings")]
     [Tooltip("This changes how often a projectile is instantiated in sec.")]
     public float shootWaitTime = 0.1f;
@@ -21,9 +22,9 @@ public class GunScript : MonoBehaviour
     public float speed = 6;
     [Tooltip("How many projectiles can you shoot in one charge")]
     public int charge = 50; private int chargeCopy;
-    private float chargeWaitInSeconds = 0.5f;
-    private float deChargeWaitInSeconds = 0.5f;
-    
+    [Tooltip("How fast does the sprayer re-charge")]
+    public float chargeWaitInSeconds = 0.5f;
+
     [Header("")]
     public Camera fpsCamera;
     [FormerlySerializedAs("bulletSpawn")] 
@@ -44,7 +45,6 @@ public class GunScript : MonoBehaviour
 
         chargeCopy = charge;
         
-        InvokeRepeating(nameof(DeChargeGun), 0f, deChargeWaitInSeconds);
         InvokeRepeating(nameof(ChargeGun), 0f, chargeWaitInSeconds);
     }
 
@@ -132,6 +132,7 @@ public class GunScript : MonoBehaviour
     IEnumerator Wait(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+        DeChargeGun();
         canShoot = true;
     }
 
