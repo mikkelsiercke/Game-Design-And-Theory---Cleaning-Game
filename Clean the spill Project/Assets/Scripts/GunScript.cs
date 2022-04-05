@@ -19,8 +19,8 @@ public class GunScript : MonoBehaviour
     public float speed = 6;
     [Tooltip("How many projectiles can you shoot in one charge")]
     public int charge = 50; private int chargeCopy;
-    private float chargeWaitInSeconds = 0.5f;
-    private float deChargeWaitInSeconds = 0.5f;
+    public float chargeWaitInSeconds = 0.5f;
+    public float deChargeWaitInSeconds = 0.5f;
     
     [Header("")]
     public Camera fpsCamera;
@@ -109,14 +109,14 @@ public class GunScript : MonoBehaviour
         else if (ammoType == 1)
         {
             Rigidbody p = Instantiate(oilProjectile, bulletSpawnTransform.transform.position, fpsCamera.transform.rotation);
-            p.velocity = -transform.forward * speed;
+            p.velocity = transform.forward * speed;
         }
     }
 
     private void ShootWater()
     {
         Rigidbody p = Instantiate(projectile, bulletSpawnTransform.transform.position, fpsCamera.transform.rotation);
-        p.velocity = -transform.forward * speed;
+        p.velocity = transform.forward * speed;
     }
 
     IEnumerator Wait(float waitTime)
