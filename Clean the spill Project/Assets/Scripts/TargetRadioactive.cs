@@ -10,7 +10,6 @@ public class TargetRadioactive : MonoBehaviour
     private ParticleSystem _particles;
 
     private bool _isCleaned;
-    private bool scoreGain;
 
     private void Start()
     {
@@ -41,13 +40,12 @@ public class TargetRadioactive : MonoBehaviour
         {
             _particles.Clear();
             _particles.Stop();
-            
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.CompareTag("AntiRadiation")) return;
+        if (!collision.gameObject.CompareTag("water")) return;
 
         if (health >= 0 && !_isCleaned)
         {
@@ -56,11 +54,7 @@ public class TargetRadioactive : MonoBehaviour
         else
         {
             _isCleaned = true;
-            if (!scoreGain)
-            {
-                Scoreboard.scoreValue += 10;
-                scoreGain = true;
-            }
+            Scoreboard.scoreValue += 10;
         }
     }
 }

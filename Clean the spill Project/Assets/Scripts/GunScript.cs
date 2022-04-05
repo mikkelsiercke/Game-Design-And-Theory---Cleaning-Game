@@ -7,10 +7,8 @@ public class GunScript : MonoBehaviour
 {
     [Header("Projectile Prefabs")]
     public GameObject projectilePrefab;
-    public GameObject ARProjectilePrefab;
     public GameObject oilProjectilePrefab;
     private Rigidbody projectile;
-    private Rigidbody ARProjectile;
     private Rigidbody oilProjectile;
     [Header("Projectile Spray Settings")]
     [Tooltip("This changes how often a projectile is instantiated in sec.")]
@@ -40,7 +38,6 @@ public class GunScript : MonoBehaviour
     {
         projectile = projectilePrefab.GetComponentInChildren<Rigidbody>();
         oilProjectile = oilProjectilePrefab.GetComponentInChildren<Rigidbody>();
-        ARProjectile = ARProjectilePrefab.GetComponentInChildren<Rigidbody>();
 
         chargeCopy = charge;
         
@@ -80,7 +77,7 @@ public class GunScript : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("Ammo is Anti-Radiation");
+            Debug.Log("Ammo is Anti-Oil");
             ammoType = 1;
         }
     }
@@ -109,23 +106,16 @@ public class GunScript : MonoBehaviour
             canShoot = false;
             StartCoroutine(Wait(shootWaitTime));
         }
-        else if (ammoType == 1 && canShoot)
+        else if (ammoType == 1)
         {
-            ShootAR();
-            canShoot = false;
-            StartCoroutine(Wait(shootWaitTime));
+            Rigidbody p = Instantiate(oilProjectile, bulletSpawnTransform.transform.position, fpsCamera.transform.rotation);
+            p.velocity = -transform.forward * speed;
         }
     }
 
     private void ShootWater()
     {
         Rigidbody p = Instantiate(projectile, bulletSpawnTransform.transform.position, fpsCamera.transform.rotation);
-        p.velocity = -transform.forward * speed;
-    }
-
-    private void ShootAR()
-    {
-        Rigidbody p = Instantiate(ARProjectile, bulletSpawnTransform.transform.position, fpsCamera.transform.rotation);
         p.velocity = -transform.forward * speed;
     }
 
