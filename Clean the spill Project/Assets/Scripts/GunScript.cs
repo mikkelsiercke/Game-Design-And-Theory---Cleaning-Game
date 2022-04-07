@@ -12,8 +12,9 @@ public class GunScript : MonoBehaviour
     private Rigidbody projectile;
     private Rigidbody ARProjectile;
     private Rigidbody oilProjectile;
-    
-    [Header("Projectile Spray Settings")]
+
+    [Header("Projectile Spray Settings")] 
+    public float damage = 5f;
     [Tooltip("This changes how often a projectile is instantiated in sec.")]
     public float shootWaitTime = 0.1f;
     [Tooltip("How far does the projectile shoot")]
@@ -70,6 +71,7 @@ public class GunScript : MonoBehaviour
         {
             if (spraySound.isPlaying)
                 spraySound.Pause();
+            
             shooting = false;
         }
 
@@ -103,17 +105,18 @@ public class GunScript : MonoBehaviour
 
     private void ShootObject()
     {
-        if (ammoType == 0 && canShoot)
+        switch (ammoType)
         {
-            ShootWater();
-            canShoot = false;
-            StartCoroutine(Wait(shootWaitTime));
-        }
-        else if (ammoType == 1 && canShoot)
-        {
-            ShootAR();
-            canShoot = false;
-            StartCoroutine(Wait(shootWaitTime));
+            case 0 when canShoot:
+                ShootWater();
+                canShoot = false;
+                StartCoroutine(Wait(shootWaitTime));
+                break;
+            case 1 when canShoot:
+                ShootAR();
+                canShoot = false;
+                StartCoroutine(Wait(shootWaitTime));
+                break;
         }
     }
 

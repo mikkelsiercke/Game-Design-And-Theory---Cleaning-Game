@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2254466959176573305}
   - component: {fileID: 4779352470137355980}
   - component: {fileID: 1488562717163089718}
-  - component: {fileID: 811653284708282421}
   m_Layer: 0
   m_Name: Wheel2
   m_TagString: Untagged
@@ -27,11 +26,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599541502378092983}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.3906344, y: -0.29985633, z: -0.6447945}
-  m_LocalScale: {x: 0.23130736, y: 0.09129535, z: 0.23130736}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.32941505, y: -0.25577536, z: -0.41510522}
+  m_LocalScale: {x: 0.0534043, y: 0.057524715, z: 0.16975443}
   m_Children: []
-  m_Father: {fileID: 3844879350848926390}
+  m_Father: {fileID: 4246027137155919578}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2254466959176573305
@@ -97,24 +96,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2951650304025065680, guid: a41bc5d124cbf3142ad868b84452930a, type: 3}
---- !u!114 &811653284708282421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599541502378092983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &3741904425007204484
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +108,6 @@ GameObject:
   - component: {fileID: 1318625210775646750}
   - component: {fileID: 4708622869471454748}
   - component: {fileID: 4788281926117073234}
-  - component: {fileID: 9083491731882582363}
   m_Layer: 0
   m_Name: Wheel1
   m_TagString: Untagged
@@ -142,11 +122,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3741904425007204484}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.3671272, y: -0.29985633, z: -0.6447945}
-  m_LocalScale: {x: 0.23130736, y: 0.09129535, z: 0.23130736}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.30729774, y: -0.25577536, z: -0.41510522}
+  m_LocalScale: {x: 0.0534043, y: 0.057524715, z: 0.16975443}
   m_Children: []
-  m_Father: {fileID: 3844879350848926390}
+  m_Father: {fileID: 4246027137155919578}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1318625210775646750
@@ -212,24 +192,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6634312075306830287, guid: a41bc5d124cbf3142ad868b84452930a, type: 3}
---- !u!114 &9083491731882582363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3741904425007204484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &4472093991896475660
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,11 +219,7 @@ Transform:
   m_LocalPosition: {x: -10.954101, y: 0.402, z: -2.3460448}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5245957948816052058}
-  - {fileID: 1156369452458677342}
-  - {fileID: 7317547088199127937}
-  - {fileID: 6133078459659889670}
-  - {fileID: 5492584302210996008}
+  - {fileID: 4246027137155919578}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -277,7 +235,6 @@ GameObject:
   - component: {fileID: 5522668387180717079}
   - component: {fileID: 3760292315697020009}
   - component: {fileID: 784595599099045382}
-  - component: {fileID: 7249681100600574025}
   m_Layer: 0
   m_Name: Wheel
   m_TagString: Untagged
@@ -292,11 +249,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4491591572861206346}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.3671272, y: -0.29985633, z: 0.67280126}
-  m_LocalScale: {x: 0.23130736, y: 0.09129535, z: 0.23130736}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.30729774, y: -0.25577536, z: 0.41510507}
+  m_LocalScale: {x: 0.0534043, y: 0.057524715, z: 0.16975443}
   m_Children: []
-  m_Father: {fileID: 3844879350848926390}
+  m_Father: {fileID: 4246027137155919578}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5522668387180717079
@@ -362,24 +319,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2309305249758762421, guid: a41bc5d124cbf3142ad868b84452930a, type: 3}
---- !u!114 &7249681100600574025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4491591572861206346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &5399947628548201858
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +331,6 @@ GameObject:
   - component: {fileID: 5678801851551924913}
   - component: {fileID: 7095516266722073394}
   - component: {fileID: 4963002398741622039}
-  - component: {fileID: 3821134872770208836}
   m_Layer: 0
   m_Name: Chasis
   m_TagString: Untagged
@@ -407,11 +345,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5399947628548201858}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.008344996, y: -0.035713486, z: -0.008823544}
+  m_LocalScale: {x: 0.23088026, y: 0.73389107, z: 0.6300949}
   m_Children: []
-  m_Father: {fileID: 3844879350848926390}
+  m_Father: {fileID: 4246027137155919578}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5678801851551924913
@@ -477,24 +415,73 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3162454981209426571, guid: a41bc5d124cbf3142ad868b84452930a, type: 3}
---- !u!114 &3821134872770208836
+--- !u!1 &6711096042131845263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4246027137155919578}
+  - component: {fileID: 8781277764980085154}
+  - component: {fileID: 9108326313660542231}
+  m_Layer: 0
+  m_Name: Target Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4246027137155919578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6711096042131845263}
+  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.036144257, y: 0.0486632, z: 0.014003515}
+  m_LocalScale: {x: 4.3312497, y: 1.3626, z: 1.5870625}
+  m_Children:
+  - {fileID: 5245957948816052058}
+  - {fileID: 1156369452458677342}
+  - {fileID: 7317547088199127937}
+  - {fileID: 6133078459659889670}
+  - {fileID: 5492584302210996008}
+  m_Father: {fileID: 3844879350848926390}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8781277764980085154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5399947628548201858}
+  m_GameObject: {fileID: 6711096042131845263}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
+  oilMaterial: {fileID: 2100000, guid: 25711f8ec055fb642b22969151424fed, type: 2}
+  cleanMaterial: {fileID: 2100000, guid: 9f5ba507544f0bc40acefc670d64fe31, type: 2}
+  overCleanMaterial: {fileID: 2100000, guid: e86f281a81b743c4e8e0b7f6e595d605, type: 2}
+  health: 20
+  character: {fileID: 6068810823627556225, guid: 4b8d6061d93f33541993080f2801d826, type: 3}
+--- !u!65 &9108326313660542231
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6711096042131845263}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7316993640863204086
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +494,6 @@ GameObject:
   - component: {fileID: 2757173105014167317}
   - component: {fileID: 3784729557443290075}
   - component: {fileID: 617146597611570858}
-  - component: {fileID: 3820580868590048268}
   m_Layer: 0
   m_Name: Wheel3
   m_TagString: Untagged
@@ -522,11 +508,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7316993640863204086}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.3906344, y: -0.29985633, z: 0.67280126}
-  m_LocalScale: {x: 0.23130736, y: 0.09129535, z: 0.23130736}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.32941505, y: -0.25577536, z: 0.41510507}
+  m_LocalScale: {x: 0.0534043, y: 0.057524715, z: 0.16975443}
   m_Children: []
-  m_Father: {fileID: 3844879350848926390}
+  m_Father: {fileID: 4246027137155919578}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2757173105014167317
@@ -592,21 +578,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2690213153912445592, guid: a41bc5d124cbf3142ad868b84452930a, type: 3}
---- !u!114 &3820580868590048268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7316993640863204086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: a1798a69791930047b23c09902970dc8, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: daea42fb55ac29d458876f709a032da6, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: 351a6a2f6951f94448a402651d00543c, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
