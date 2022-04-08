@@ -7,7 +7,7 @@ public class Scoreboard : MonoBehaviour
 {
 
     public static int scoreValue = 0;
-    private int lastScoreValue;
+    public static int lastScoreValue;
     Text score;
     public AudioSource[] audio;
     public AudioSource scoreIncrease;
@@ -33,7 +33,6 @@ public class Scoreboard : MonoBehaviour
             lastScoreValue = scoreValue;
             scoreIncrease.Play();
             Debug.Log("Score has increased");
-
         }
         else if(scoreValue < lastScoreValue)
         {

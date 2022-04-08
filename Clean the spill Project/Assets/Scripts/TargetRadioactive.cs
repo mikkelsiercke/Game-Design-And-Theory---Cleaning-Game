@@ -23,13 +23,11 @@ public class TargetRadioactive : MonoBehaviour
         {
             if (_ppColorFilter.filter)
             {
-                print("Is on");
                 if (!_particles.isPlaying)
                     _particles.Play();
             }
             else
             {
-                print("Is off");
                 if (_particles.isPlaying)
                 {
                     _particles.Clear();
