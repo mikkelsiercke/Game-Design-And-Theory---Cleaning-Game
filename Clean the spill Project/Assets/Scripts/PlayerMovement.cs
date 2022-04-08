@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         // controller.Move(move * moveSpeed * Time.deltaTime);
         if (fpsCamera.transform.rotation.eulerAngles.x > 80 && fpsCamera.transform.rotation.eulerAngles.x <= 90)
         {
-            if (gunScript.charge > 10 && gunScript.shooting)
+            if (gunScript.charge > 0 && gunScript.shooting)
             {
                 move.y = jumpSpeed;
             }
