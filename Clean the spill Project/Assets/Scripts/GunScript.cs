@@ -7,12 +7,9 @@ public class GunScript : MonoBehaviour
 {
     [Header("Projectile Prefabs")]
     public GameObject projectilePrefab;
-    public GameObject ARProjectilePrefab;
     public GameObject oilProjectilePrefab;
     private Rigidbody projectile;
-    private Rigidbody ARProjectile;
     private Rigidbody oilProjectile;
-
     [Header("Projectile Spray Settings")] 
     public float damage = 5f;
     [Tooltip("This changes how often a projectile is instantiated in sec.")]
@@ -23,9 +20,9 @@ public class GunScript : MonoBehaviour
     public float speed = 6;
     [Tooltip("How many projectiles can you shoot in one charge")]
     public int charge = 50; private int chargeCopy;
-    [Tooltip("How fast does the sprayer re-charge")]
-    public float chargeWaitInSeconds = 0.5f;
-
+    private float chargeWaitInSeconds = 0.5f;
+    private float deChargeWaitInSeconds = 0.5f;
+    
     [Header("")]
     public Camera fpsCamera;
     [FormerlySerializedAs("bulletSpawn")] 
@@ -42,10 +39,10 @@ public class GunScript : MonoBehaviour
     {
         projectile = projectilePrefab.GetComponentInChildren<Rigidbody>();
         oilProjectile = oilProjectilePrefab.GetComponentInChildren<Rigidbody>();
-        ARProjectile = ARProjectilePrefab.GetComponentInChildren<Rigidbody>();
 
         chargeCopy = charge;
         
+        InvokeRepeating(nameof(DeChargeGun), 0f, deChargeWaitInSeconds);
         InvokeRepeating(nameof(ChargeGun), 0f, chargeWaitInSeconds);
     }
 
@@ -82,7 +79,7 @@ public class GunScript : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("Ammo is Anti-Radiation");
+            Debug.Log("Ammo is Anti-Oil");
             ammoType = 1;
         }
     }
@@ -126,16 +123,9 @@ public class GunScript : MonoBehaviour
         p.velocity = -transform.forward * speed;
     }
 
-    private void ShootAR()
-    {
-        Rigidbody p = Instantiate(ARProjectile, bulletSpawnTransform.transform.position, fpsCamera.transform.rotation);
-        p.velocity = -transform.forward * speed;
-    }
-
     IEnumerator Wait(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        DeChargeGun();
         canShoot = true;
     }
 
