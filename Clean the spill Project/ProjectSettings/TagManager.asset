@@ -9,7 +9,6 @@ TagManager:
   - target
   - oilGun
   - CG_Filter
-  - AntiRadiation
   layers:
   - Default
   - TransparentFX
@@ -23,7 +22,7 @@ TagManager:
   - oilGun
   - PostProcess
   - colorFIlter
-  - ARGun
+  - 
   - 
   - 
   - 
