@@ -1,30 +1,38 @@
-using System;
 using UnityEngine;
-using System.Collections;
 
 public class Target : MonoBehaviour
 {
+    [Header("Materials")]
     public Material oilMaterial;
     public Material cleanMaterial;
     public Material overCleanMaterial;
 
-    public float health = 2f;
-    public float damage = 0.01f;
-    public float oilDamage = 0.5f;
-    private float initialHealt;
-    private bool isCleaned = false;
-    private bool isOverCleaned = false;
+    [Header("")]
+    public float health = 20f;
 
-    private Renderer _renderer;
+    [Header("Required references")] 
+    public GameObject character;
+    
+    private float _damage;
+    private float _initialHealth;
+    private bool _isCleaned = false;
+    private bool _isOverCleaned = false;
+    private Renderer[] _renderer;
 
     private void Start()
     {
-        _renderer = gameObject.GetComponent<Renderer>();
-        initialHealt = health;
-        _renderer.material = oilMaterial;
+        _renderer = gameObject.GetComponentsInChildren<Renderer>();
+        _damage = character.GetComponentInChildren<GunScript>().damage;
+        
+        _initialHealth = health;
+
+        foreach (var rend in _renderer)
+        {
+            rend.material = oilMaterial;
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         // Water damage
         if (collision.gameObject.CompareTag("water"))
@@ -32,6 +40,7 @@ public class Target : MonoBehaviour
             WaterDamage();
             Score();
         }
+        // Oil damage
         else if (collision.gameObject.CompareTag("oil") || collision.gameObject.CompareTag("oilGun"))
         {
             OilDamage();
@@ -41,15 +50,21 @@ public class Target : MonoBehaviour
     private void WaterDamage()
     {
         if (health >= 0)
-            health -= damage;
+            health -= _damage;
 
-        if (health <= initialHealt && health > initialHealt / 2)
+        if (health <= _initialHealth && health > _initialHealth / 2)
         {
-            _renderer.material.Lerp(cleanMaterial, oilMaterial, health / initialHealt);
+            foreach (var rend in _renderer)
+            {
+                rend.material.Lerp(cleanMaterial, oilMaterial, health / _initialHealth);
+            }
         }
-        else if (health < initialHealt / 2)
+        else if (health < _initialHealth / 2)
         {
-            _renderer.material.Lerp(overCleanMaterial, cleanMaterial, health / initialHealt);
+            foreach (var rend in _renderer)
+            {
+                rend.material.Lerp(overCleanMaterial, cleanMaterial, health / _initialHealth);
+            }
         }
     }
 
@@ -57,24 +72,28 @@ public class Target : MonoBehaviour
     {
         print("Hit with Oil!");
 
-        if (health <= initialHealt)
+        if (health <= _initialHealth)
         {
-            health = initialHealt;
-            _renderer.material = oilMaterial;
+            health = _initialHealth;
+            
+            foreach (var rend in _renderer)
+            {
+                rend.material = oilMaterial;
+            }
         }
     }
 
     private void Score()
     {
-        if (health <= initialHealt / 1.5f && isCleaned == false)
+        if (health <= _initialHealth / 1.5f && _isCleaned == false)
         {
-            isCleaned = true;
+            _isCleaned = true;
             Scoreboard.scoreValue += 10;
         }
 
-        if (health <= initialHealt / 3f && isOverCleaned == false)
+        if (health <= _initialHealth / 3f && _isOverCleaned == false)
         {
-            isOverCleaned = true;
+            _isOverCleaned = true;
             Scoreboard.scoreValue -= 10;
         }
     }

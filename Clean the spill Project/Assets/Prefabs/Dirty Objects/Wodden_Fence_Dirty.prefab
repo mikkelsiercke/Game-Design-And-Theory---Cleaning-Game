@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 7307301225186850197}
   - component: {fileID: 7661085345108408034}
   - component: {fileID: 5238747756890525819}
-  - component: {fileID: 5846318549586176001}
   m_Layer: 0
   m_Name: pCube16
   m_TagString: Untagged
@@ -109,10 +108,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265865117753673920}
   m_LocalRotation: {x: 0.70188636, y: -0, z: -0, w: 0.712289}
-  m_LocalPosition: {x: -0, y: 0.3605943, z: -0.07469922}
-  m_LocalScale: {x: 0.052207746, y: 0.12267496, z: 0.7135861}
+  m_LocalPosition: {x: 0.12126302, y: 0.005265236, z: -0.021889864}
+  m_LocalScale: {x: 0.2344769, y: 0.035954062, z: 0.67128915}
   m_Children: []
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7307301225186850197
@@ -178,24 +177,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2735251984287490357, guid: 7d9367df119355742915b6a79a79b76d, type: 3}
---- !u!114 &5846318549586176001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 265865117753673920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: 2b1195add8e1c814d886bb8ef7f07624, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: f0f31fcec4243ac4d8c23a57d8fb0e8d, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: f6bea41a37533f3459e7ad587b976939, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &382067214196243951
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +351,6 @@ GameObject:
   - component: {fileID: 2247564711683390249}
   - component: {fileID: 1331037142478032255}
   - component: {fileID: 5614470662857655601}
-  - component: {fileID: 8753270442031148592}
   m_Layer: 0
   m_Name: pCube22
   m_TagString: Untagged
@@ -385,11 +365,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541214940522458829}
-  m_LocalRotation: {x: 7.2761867e-16, y: 0.004230019, z: 0.99999106, w: 5.815502e-17}
-  m_LocalPosition: {x: -0.08166938, y: 0.6037593, z: -0.9117576}
-  m_LocalScale: {x: 0.047701508, y: 0.10542527, z: 1.1499345}
+  m_LocalRotation: {x: -0, y: 0.004230019, z: 0.99999106, w: 0}
+  m_LocalPosition: {x: -0.24553248, y: 0.2341264, z: -0.26718163}
+  m_LocalScale: {x: 0.21423835, y: 0.09920809, z: 0.33699375}
   m_Children: []
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2247564711683390249
@@ -455,24 +435,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3628990442929905983, guid: 7d9367df119355742915b6a79a79b76d, type: 3}
---- !u!114 &8753270442031148592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541214940522458829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: 2b1195add8e1c814d886bb8ef7f07624, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: f0f31fcec4243ac4d8c23a57d8fb0e8d, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: f6bea41a37533f3459e7ad587b976939, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &885418945526794217
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +609,6 @@ GameObject:
   - component: {fileID: 4481170329177125632}
   - component: {fileID: 4658745088286934558}
   - component: {fileID: 928008952985494788}
-  - component: {fileID: 2842666909235913066}
   m_Layer: 0
   m_Name: pCube14
   m_TagString: Untagged
@@ -662,11 +623,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922971291366414619}
-  m_LocalRotation: {x: 0.7206268, y: 0, z: 0, w: 0.6933232}
-  m_LocalPosition: {x: -0, y: 0.35547113, z: 1.5123414}
-  m_LocalScale: {x: 0.050704565, y: 0.11914287, z: 0.700571}
+  m_LocalRotation: {x: 0.7206268, y: -0, z: -0, w: 0.6933232}
+  m_LocalPosition: {x: 0.121263295, y: 0.0004434305, z: 0.44317693}
+  m_LocalScale: {x: 0.22772577, y: 0.034949534, z: 0.65719444}
   m_Children: []
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4481170329177125632
@@ -732,24 +693,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 9042771077998628582, guid: 7d9367df119355742915b6a79a79b76d, type: 3}
---- !u!114 &2842666909235913066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922971291366414619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: 2b1195add8e1c814d886bb8ef7f07624, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: f0f31fcec4243ac4d8c23a57d8fb0e8d, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: f6bea41a37533f3459e7ad587b976939, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &1156593604004855740
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +705,6 @@ GameObject:
   - component: {fileID: 4940149795574606049}
   - component: {fileID: 5377140788543615452}
   - component: {fileID: 576738007633744145}
-  - component: {fileID: 8053429793289646559}
   m_Layer: 0
   m_Name: pCube17
   m_TagString: Untagged
@@ -777,11 +719,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156593604004855740}
-  m_LocalRotation: {x: 7.2877095e-16, y: 0.027401963, z: 0.99962455, w: 4.127809e-17}
-  m_LocalPosition: {x: -0.08166938, y: 0.34557208, z: 0.8264741}
-  m_LocalScale: {x: 0.047701508, y: 0.10542527, z: 1.1499345}
+  m_LocalRotation: {x: -0, y: 0.027401963, z: 0.99962455, w: 0}
+  m_LocalPosition: {x: -0.24553245, y: -0.008873322, z: 0.24219018}
+  m_LocalScale: {x: 0.21423836, y: 0.098569475, z: 0.33767506}
   m_Children: []
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4940149795574606049
@@ -847,24 +789,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8659943070623925175, guid: 7d9367df119355742915b6a79a79b76d, type: 3}
---- !u!114 &8053429793289646559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156593604004855740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: 2b1195add8e1c814d886bb8ef7f07624, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: f0f31fcec4243ac4d8c23a57d8fb0e8d, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: f6bea41a37533f3459e7ad587b976939, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &1171120382592960393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,9 +1136,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853361594312467778}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.12126316, y: -0.33411765, z: 0}
+  m_LocalScale: {x: 4.491228, y: 0.9411765, z: 0.29304028}
   m_Children:
   - {fileID: 3259019910310002124}
   - {fileID: 8598802188417164802}
@@ -1222,7 +1146,7 @@ Transform:
   - {fileID: 5759956204094043718}
   - {fileID: 4978173892482443992}
   - {fileID: 8921972415860773195}
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2152662220821570401
@@ -1252,19 +1176,7 @@ Transform:
   m_LocalPosition: {x: -1.6850306, y: -0.13760391, z: 3.3420336}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7723370888052971003}
-  - {fileID: 5715199622984180710}
-  - {fileID: 4239282655879051600}
-  - {fileID: 5199393723981404833}
-  - {fileID: 780469432566653643}
-  - {fileID: 9025449686546581541}
-  - {fileID: 6519899107762435322}
-  - {fileID: 7902150858850268358}
-  - {fileID: 1695000584019303215}
-  - {fileID: 1538883179051371999}
-  - {fileID: 6656210258989644401}
-  - {fileID: 6225598974276793539}
-  - {fileID: 2522397289272374835}
+  - {fileID: 8788087184392290107}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
@@ -1280,7 +1192,6 @@ GameObject:
   - component: {fileID: 9026809482229317684}
   - component: {fileID: 6402741656806760074}
   - component: {fileID: 3837559883288493250}
-  - component: {fileID: 2823608844275913164}
   m_Layer: 0
   m_Name: pCube18
   m_TagString: Untagged
@@ -1295,11 +1206,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2263644344588273850}
-  m_LocalRotation: {x: 7.2790396e-16, y: 0.009296652, z: 0.9999568, w: 5.4467623e-17}
-  m_LocalPosition: {x: -0.08166938, y: 0.63648957, z: 0.84050167}
-  m_LocalScale: {x: 0.047701508, y: 0.10542527, z: 1.1499345}
+  m_LocalRotation: {x: -0, y: 0.009296652, z: 0.9999568, w: 0}
+  m_LocalPosition: {x: -0.24553253, y: 0.26493138, z: 0.24630085}
+  m_LocalScale: {x: 0.21423835, y: 0.09914797, z: 0.33705744}
   m_Children: []
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9026809482229317684
@@ -1365,24 +1276,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4465315455489950968, guid: 7d9367df119355742915b6a79a79b76d, type: 3}
---- !u!114 &2823608844275913164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2263644344588273850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: 2b1195add8e1c814d886bb8ef7f07624, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: f0f31fcec4243ac4d8c23a57d8fb0e8d, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: f6bea41a37533f3459e7ad587b976939, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &2963043381642583092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,8 +1300,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2963043381642583092}
   m_LocalRotation: {x: 0.024098564, y: -0, z: -0, w: 0.9997096}
-  m_LocalPosition: {x: 0.0011347758, y: 0.04310289, z: 1.5931273}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.12635985, y: -0.29355022, z: 0.46685046}
+  m_LocalScale: {x: 4.491228, y: 0.9363684, z: 0.29350957}
   m_Children:
   - {fileID: 930940595517844317}
   - {fileID: 1842891821300518383}
@@ -1416,7 +1309,7 @@ Transform:
   - {fileID: 8840075051917649085}
   - {fileID: 5998774708477287394}
   - {fileID: 4145904157578785205}
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3040238453462648569
@@ -1431,7 +1324,6 @@ GameObject:
   - component: {fileID: 7074260584953489816}
   - component: {fileID: 6454594979784916531}
   - component: {fileID: 5131625219805492418}
-  - component: {fileID: 8495965435966090509}
   m_Layer: 0
   m_Name: pCube20
   m_TagString: Untagged
@@ -1446,11 +1338,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3040238453462648569}
-  m_LocalRotation: {x: 5.937841e-17, y: 0.9999968, z: -0.0025485505, w: -7.2751983e-16}
-  m_LocalPosition: {x: -0.08166938, y: 0.30688798, z: -0.9204936}
-  m_LocalScale: {x: 0.047701508, y: 0.10542527, z: 1.1499345}
+  m_LocalRotation: {x: 1.110223e-16, y: 0.9999968, z: -0.0025485505, w: 0}
+  m_LocalPosition: {x: -0.24553242, y: -0.045281887, z: -0.26974165}
+  m_LocalScale: {x: 0.21423835, y: 0.099218085, z: 0.3369832}
   m_Children: []
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7074260584953489816
@@ -1516,24 +1408,81 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4121606559162394652, guid: 7d9367df119355742915b6a79a79b76d, type: 3}
---- !u!114 &8495965435966090509
+--- !u!1 &3654272949667207081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8788087184392290107}
+  - component: {fileID: 4039371801159284857}
+  - component: {fileID: 2481822474686464690}
+  m_Layer: 0
+  m_Name: Target Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8788087184392290107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654272949667207081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.027, y: 0.355, z: 0}
+  m_LocalScale: {x: 0.22265625, y: 1.0625, z: 3.4125}
+  m_Children:
+  - {fileID: 7723370888052971003}
+  - {fileID: 5715199622984180710}
+  - {fileID: 4239282655879051600}
+  - {fileID: 5199393723981404833}
+  - {fileID: 780469432566653643}
+  - {fileID: 9025449686546581541}
+  - {fileID: 6519899107762435322}
+  - {fileID: 7902150858850268358}
+  - {fileID: 1695000584019303215}
+  - {fileID: 1538883179051371999}
+  - {fileID: 6656210258989644401}
+  - {fileID: 6225598974276793539}
+  - {fileID: 2522397289272374835}
+  m_Father: {fileID: 1626954291653212635}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4039371801159284857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3040238453462648569}
+  m_GameObject: {fileID: 3654272949667207081}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: 2b1195add8e1c814d886bb8ef7f07624, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: f0f31fcec4243ac4d8c23a57d8fb0e8d, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: f6bea41a37533f3459e7ad587b976939, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
+  oilMaterial: {fileID: 2100000, guid: 7c7661bca701dcd4f8057912958d9b61, type: 2}
+  cleanMaterial: {fileID: 2100000, guid: 9f5ba507544f0bc40acefc670d64fe31, type: 2}
+  overCleanMaterial: {fileID: 2100000, guid: e86f281a81b743c4e8e0b7f6e595d605, type: 2}
+  health: 20
+  character: {fileID: 6068810823627556225, guid: 4b8d6061d93f33541993080f2801d826, type: 3}
+--- !u!65 &2481822474686464690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654272949667207081}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3745031030020798745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,7 +1657,6 @@ GameObject:
   - component: {fileID: 5449946564355538062}
   - component: {fileID: 2330653429601757076}
   - component: {fileID: 5344225502535702002}
-  - component: {fileID: 5780981824559669958}
   m_Layer: 0
   m_Name: pCube19
   m_TagString: Untagged
@@ -1723,11 +1671,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4176559655245016387}
-  m_LocalRotation: {x: 2.8412312e-16, y: 0.014291747, z: 0.9998979, w: 5.717756e-17}
-  m_LocalPosition: {x: -0.08166938, y: 0.119758084, z: 0.8154714}
-  m_LocalScale: {x: 0.047701508, y: 0.10542527, z: 1.1499345}
+  m_LocalRotation: {x: -0, y: 0.014291747, z: 0.9998979, w: 0}
+  m_LocalPosition: {x: -0.24553293, y: -0.22140415, z: 0.23896593}
+  m_LocalScale: {x: 0.21423835, y: 0.09904483, z: 0.33716682}
   m_Children: []
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5449946564355538062
@@ -1793,24 +1741,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1984987933520197390, guid: 7d9367df119355742915b6a79a79b76d, type: 3}
---- !u!114 &5780981824559669958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4176559655245016387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: 2b1195add8e1c814d886bb8ef7f07624, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: f0f31fcec4243ac4d8c23a57d8fb0e8d, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: f6bea41a37533f3459e7ad587b976939, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &5060396533035538532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,7 +1996,6 @@ GameObject:
   - component: {fileID: 8608090253756105694}
   - component: {fileID: 3911553585460993473}
   - component: {fileID: 2176436595272152388}
-  - component: {fileID: 7753154111780567921}
   m_Layer: 0
   m_Name: pCube21
   m_TagString: Untagged
@@ -2081,11 +2010,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5909110663574926874}
-  m_LocalRotation: {x: 2.833161e-16, y: 0.0006405932, z: 0.9999998, w: 6.105086e-17}
-  m_LocalPosition: {x: -0.08166938, y: 0.0978057, z: -0.9412195}
-  m_LocalScale: {x: 0.047701508, y: 0.10542527, z: 1.1499345}
+  m_LocalRotation: {x: -0, y: 0.0006405932, z: 0.9999998, w: 5.551115e-17}
+  m_LocalPosition: {x: -0.24553286, y: -0.2420652, z: -0.27581528}
+  m_LocalScale: {x: 0.21423835, y: 0.09922341, z: 0.33697754}
   m_Children: []
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8608090253756105694
@@ -2151,24 +2080,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7825289430055562144, guid: 7d9367df119355742915b6a79a79b76d, type: 3}
---- !u!114 &7753154111780567921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5909110663574926874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: 2b1195add8e1c814d886bb8ef7f07624, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: f0f31fcec4243ac4d8c23a57d8fb0e8d, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: f6bea41a37533f3459e7ad587b976939, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &6068447569875131053
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,9 +2427,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7445617263121671079}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.009888301, y: 0.050425585, z: 0}
-  m_LocalScale: {x: 1, y: 0.9108546, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.16567375, y: -0.28665826, z: 0}
+  m_LocalScale: {x: 4.491228, y: 0.8572749, z: 0.29304028}
   m_Children:
   - {fileID: 933085581222019086}
   - {fileID: 6626472697941177254}
@@ -2526,7 +2437,7 @@ Transform:
   - {fileID: 5990301779948739280}
   - {fileID: 1823542337784662541}
   - {fileID: 2256893234015737962}
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7736791116868482719
@@ -2876,9 +2787,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8256871987997087751}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.12126316, y: -0.33411765, z: 0}
+  m_LocalScale: {x: 4.491228, y: 0.9411765, z: 0.29304028}
   m_Children:
   - {fileID: 3870435624471257319}
   - {fileID: 4966694828618732145}
@@ -2886,7 +2797,7 @@ Transform:
   - {fileID: 9218809614804658167}
   - {fileID: 4187649908906181972}
   - {fileID: 3984656919906688542}
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8474288592657674495
@@ -2901,7 +2812,6 @@ GameObject:
   - component: {fileID: 8493516124974360736}
   - component: {fileID: 3672837181349937296}
   - component: {fileID: 4264495903894044174}
-  - component: {fileID: 4230643825382295805}
   m_Layer: 0
   m_Name: pCube15
   m_TagString: Untagged
@@ -2917,10 +2827,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8474288592657674495}
   m_LocalRotation: {x: 0.69003975, y: -0, z: -0, w: 0.72377145}
-  m_LocalPosition: {x: -0, y: 0.3954531, z: -1.4193245}
-  m_LocalScale: {x: 0.052207746, y: 0.12267496, z: 0.7423994}
+  m_LocalPosition: {x: 0.12126308, y: 0.038073514, z: -0.41591927}
+  m_LocalScale: {x: 0.2344769, y: 0.0360051, z: 0.6952316}
   m_Children: []
-  m_Father: {fileID: 1626954291653212635}
+  m_Father: {fileID: 8788087184392290107}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8493516124974360736
@@ -2986,24 +2896,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 379010558040167564, guid: 7d9367df119355742915b6a79a79b76d, type: 3}
---- !u!114 &4230643825382295805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8474288592657674495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oilMaterial: {fileID: 2100000, guid: 2b1195add8e1c814d886bb8ef7f07624, type: 2}
-  cleanMaterial: {fileID: 2100000, guid: f0f31fcec4243ac4d8c23a57d8fb0e8d, type: 2}
-  overCleanMaterial: {fileID: 2100000, guid: f6bea41a37533f3459e7ad587b976939, type: 2}
-  health: 1
-  damage: 0.01
-  oilDamage: 0.5
 --- !u!1 &8766707980221085249
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,47 +1,44 @@
 using UnityEngine;
-using System.Collections;
-using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
-using System.Collections;
 
-public class filter_Script : MonoBehaviour {
-public PostProcessVolume volume;
+public class filter_Script : MonoBehaviour
+{
+    public PostProcessVolume volume;
+    private Vignette _Vignette;
 
+    public bool filter;
+    public float saturation = 5f;
 
-private Vignette _Vignette;
-//private ColorGrading colorFilter;
+    void Start()
+    {
+        //Vignette
+        volume.profile.TryGetSettings(out _Vignette);
 
-public bool filter;
-public float saturation = 5f;
+        //volume.profile.TryGetSettings(out colorFilter);
 
-    void Start(){
-    //Vignette
-    volume.profile.TryGetSettings(out _Vignette);
+        _Vignette.intensity.value = 0;
 
-   //volume.profile.TryGetSettings(out colorFilter);
-
-    _Vignette.intensity.value = 0;
-
-    //Filter aktiveret eller ej
-    filter = false;
-
+        //Filter aktiveret eller ej
+        filter = false;
     }
 
-    void Update(){
+    void Update()
+    {
         //If statement der aktiverer filtret
-        if(Input.GetKeyDown("space") && filter == false){
+        if (Input.GetKeyDown("space") && filter == false)
+        {
             //Sætter Vignetten til 1 samt sætter boolean der kontrollerer filt er til true
 
-           _Vignette.intensity.value = 1;
+            _Vignette.intensity.value = 1;
             filter = true;
             //colorFilter.enable.value = true;
-        }else if (Input.GetKeyDown("space") && filter == true){
+        }
+        else if (Input.GetKeyDown("space") && filter == true)
+        {
             //Fjerne vignette og sætte boolean til false
-           _Vignette.intensity.value = 0;
+            _Vignette.intensity.value = 0;
             filter = false;
             //colorFilter.enable.value = false;
         }
     }
 }
-
-
