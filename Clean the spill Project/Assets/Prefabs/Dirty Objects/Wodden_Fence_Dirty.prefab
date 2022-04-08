@@ -1468,7 +1468,7 @@ MonoBehaviour:
   oilMaterial: {fileID: 2100000, guid: 7c7661bca701dcd4f8057912958d9b61, type: 2}
   cleanMaterial: {fileID: 2100000, guid: 9f5ba507544f0bc40acefc670d64fe31, type: 2}
   overCleanMaterial: {fileID: 2100000, guid: e86f281a81b743c4e8e0b7f6e595d605, type: 2}
-  health: 20
+  health: 100
   character: {fileID: 6068810823627556225, guid: 4b8d6061d93f33541993080f2801d826, type: 3}
 --- !u!65 &2481822474686464690
 BoxCollider:

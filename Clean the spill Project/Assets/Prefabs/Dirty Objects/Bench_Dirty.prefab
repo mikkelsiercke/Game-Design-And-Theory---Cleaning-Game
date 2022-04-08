@@ -106,6 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039170760127343565}
   - component: {fileID: 2133307122471201616}
+  - component: {fileID: 4344581134546152706}
   - component: {fileID: 1764410121235417826}
   m_Layer: 0
   m_Name: Target Manager
@@ -141,8 +142,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.56, z: 1}
+  m_Center: {x: 0, y: -0.25, z: 0}
+--- !u!65 &4344581134546152706
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825133870274158266}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 1, z: 1}
+  m_Center: {x: 0.38, y: 0, z: 0}
 --- !u!114 &1764410121235417826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +172,7 @@ MonoBehaviour:
   oilMaterial: {fileID: 2100000, guid: 9d052019e53187043a7fbfd086f7e4bf, type: 2}
   cleanMaterial: {fileID: 2100000, guid: 9f5ba507544f0bc40acefc670d64fe31, type: 2}
   overCleanMaterial: {fileID: 2100000, guid: c361ab3ca25d54042a1ba0c5c8654ba6, type: 2}
-  health: 20
+  health: 100
   character: {fileID: 6068810823627556225, guid: 4b8d6061d93f33541993080f2801d826, type: 3}
 --- !u!1 &1018729398363199599
 GameObject:

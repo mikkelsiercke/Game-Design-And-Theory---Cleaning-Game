@@ -8,7 +8,7 @@ public class Target : MonoBehaviour
     public Material overCleanMaterial;
 
     [Header("")]
-    public float health = 20f;
+    public float health = 100f;
 
     [Header("Required references")] 
     public GameObject character;
