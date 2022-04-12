@@ -8,7 +8,7 @@ public class CleaningTimer : MonoBehaviour
     public float repeatRateInSeconds = 1f;
     public float startDelayInSeconds;
     public float timeIncrease = 10f;
-    public static bool timesUp;
+    public bool timesUp;
 
 
     [Header("")] public Slider slider;

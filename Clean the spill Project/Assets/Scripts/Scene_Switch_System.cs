@@ -17,7 +17,7 @@ public class Scene_Switch_System : MonoBehaviour
 
     void Update()
     {
-        if (Scoreboard.scoreValue >= scoreRequired && CleaningTimer.timesUp == false)
+        if (Scoreboard.scoreValue >= scoreRequired)
         {
             gameObject.SetActive(true);
         } else if (Scoreboard.scoreValue < scoreRequired)
