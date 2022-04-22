@@ -29,7 +29,7 @@ public class filter_Script : MonoBehaviour
         {
             //Sætter Vignetten til 1 samt sætter boolean der kontrollerer filt er til true
 
-            _Vignette.intensity.value = 0.9f;
+            _Vignette.intensity.value = 1;
             filter = true;
             //colorFilter.enable.value = true;
         }

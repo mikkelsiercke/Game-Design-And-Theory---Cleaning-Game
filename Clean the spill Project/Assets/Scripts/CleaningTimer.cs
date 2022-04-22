@@ -9,7 +9,7 @@ public class CleaningTimer : MonoBehaviour
     public float repeatRateInSeconds = 1f;
     public float startDelayInSeconds;
     public float timeIncrease = 10f;
-    public static bool timesUp;
+    public bool timesUp;
     //public float levelScene;
 
     public GameObject GameOver_;
@@ -44,7 +44,7 @@ public class CleaningTimer : MonoBehaviour
             _lastScoreValue = Scoreboard.scoreValue;
         }
 
-       // GameOver();
+        GameOver();
         ToggleGameOver();
         RestartScene();
         ReturnToLevelSelect();
@@ -64,7 +64,7 @@ public class CleaningTimer : MonoBehaviour
         }
     }
     
-   /* private void GameOver()
+    private void GameOver()
     {
         if (timesUp == true)
         {
@@ -87,7 +87,7 @@ public class CleaningTimer : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         AudioListener.pause = false;
-    }*/
+    }
 
     void ToggleGameOver()
     {
@@ -107,9 +107,8 @@ public class CleaningTimer : MonoBehaviour
     {
         if(timesUp == true && Input.GetKeyDown("escape"))
         {
-            //ResumeGame();
-            //Olga crime committed!
-            SceneManager.LoadScene("LevelSelectScene");
+            ResumeGame();
+            SceneManager.LoadScene(1);
         }
     }
 }
