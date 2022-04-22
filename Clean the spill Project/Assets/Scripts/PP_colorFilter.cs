@@ -6,10 +6,6 @@ public class PP_colorFilter : MonoBehaviour
 {
     public bool filter;
     public GameObject CG_Filter;
-    public bool geigerSound;
-    public GameObject GeigerSound_1;
-    public GameObject GeigerSound_2;
-    
     
     // Start is called before the first frame update
     void Start()
@@ -27,8 +23,6 @@ public class PP_colorFilter : MonoBehaviour
            FilterToggle();
            Debug.Log("Filter is toggled");
        }
-       GeigerSound_1.SetActive(filter);
-       GeigerSound_2.SetActive(filter);
        CG_Filter.SetActive(filter);
 
     }
