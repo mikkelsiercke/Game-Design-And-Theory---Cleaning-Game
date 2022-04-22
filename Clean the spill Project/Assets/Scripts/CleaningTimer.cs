@@ -44,10 +44,10 @@ public class CleaningTimer : MonoBehaviour
             _lastScoreValue = Scoreboard.scoreValue;
         }
 
-        GameOver();
+        //GameOver();
         ToggleGameOver();
         RestartScene();
-        ReturnToLevelSelect();
+        //ReturnToLevelSelect();
 
     }
 
@@ -64,7 +64,7 @@ public class CleaningTimer : MonoBehaviour
         }
     }
     
-    private void GameOver()
+   private void GameOver()
     {
         if (timesUp == true)
         {
@@ -103,12 +103,12 @@ public class CleaningTimer : MonoBehaviour
         
     }
 
-    void ReturnToLevelSelect()
+    /*void ReturnToLevelSelect()
     {
         if(timesUp == true && Input.GetKeyDown("escape"))
         {
             ResumeGame();
             SceneManager.LoadScene(1);
         }
-    }
+    }*/
 }
