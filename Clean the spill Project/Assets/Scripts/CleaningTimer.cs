@@ -9,7 +9,7 @@ public class CleaningTimer : MonoBehaviour
     public float repeatRateInSeconds = 1f;
     public float startDelayInSeconds;
     public float timeIncrease = 10f;
-    public bool timesUp;
+    //public bool timesUp;
     //public float levelScene;
     public static bool timesUp;
 
