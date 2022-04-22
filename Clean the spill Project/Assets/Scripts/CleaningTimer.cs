@@ -11,6 +11,7 @@ public class CleaningTimer : MonoBehaviour
     public float timeIncrease = 10f;
     public bool timesUp;
     //public float levelScene;
+    public static bool timesUp;
 
     public GameObject GameOver_;
 
