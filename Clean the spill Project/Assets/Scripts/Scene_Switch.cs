@@ -10,5 +10,6 @@ public class Scene_Switch : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         SceneManager.LoadScene(sceneNumber);
+        Scoreboard.scoreValue = 0;
     }
 }
