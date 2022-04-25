@@ -11,6 +11,7 @@ public class intro_teleport : MonoBehaviour
         {
             Debug.Log("entered collision");
             SceneManager.LoadScene(3);
+            Scoreboard.scoreValue = 0;
         }
     }
 }
