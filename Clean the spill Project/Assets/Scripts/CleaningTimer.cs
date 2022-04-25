@@ -99,6 +99,7 @@ public class CleaningTimer : MonoBehaviour
         if(timesUp == true && Input.GetKeyDown("r"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Scoreboard.scoreValue = 0;
         }
         
     }
