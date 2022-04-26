@@ -51,9 +51,11 @@ public class Target : MonoBehaviour
     {
         if (health >= 0)
             health -= _damage;
-
+        /*
         if (health <= _initialHealth && health > _initialHealth / 2)
         {
+
+            
             foreach (var rend in _renderer)
             {
                 rend.material.Lerp(cleanMaterial, oilMaterial, health / _initialHealth);
@@ -61,11 +63,12 @@ public class Target : MonoBehaviour
         }
         else if (health < _initialHealth / 2)
         {
+            
             foreach (var rend in _renderer)
-            {
+            {   
                 rend.material.Lerp(overCleanMaterial, cleanMaterial, health / _initialHealth);
             }
-        }
+        }*/
     }
 
     private void OilDamage()
@@ -87,12 +90,20 @@ public class Target : MonoBehaviour
     {
         if (health <= _initialHealth / 1.5f && _isCleaned == false)
         {
+            foreach (var rend in _renderer)
+            {
+                rend.material = cleanMaterial;
+            }
             _isCleaned = true;
             Scoreboard.scoreValue += 10;
         }
 
         if (health <= _initialHealth / 3f && _isOverCleaned == false)
         {
+            foreach (var rend in _renderer)
+            {
+                rend.material = overCleanMaterial;
+            }
             _isOverCleaned = true;
             Scoreboard.scoreValue -= 10;
         }
