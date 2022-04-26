@@ -1294,6 +1294,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 61319686340288971}
+  - component: {fileID: 1797332270564762672}
+  - component: {fileID: 8785708658750405535}
   m_Layer: 0
   m_Name: Bike_GRP1
   m_TagString: Untagged
@@ -1349,6 +1351,36 @@ Transform:
   m_Father: {fileID: 1005772757610368454}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1797332270564762672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922315490236908525}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3.3313107, z: 6.768013}
+  m_Center: {x: 2.4693042e-23, y: 1.1656557, z: 0.7225403}
+--- !u!114 &8785708658750405535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922315490236908525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oilMaterial: {fileID: 2100000, guid: aa265dd6d20c8ef49b6f6abe457c7e9d, type: 2}
+  cleanMaterial: {fileID: 2100000, guid: 2bda4fb14fe940249bcec1b366e046f4, type: 2}
+  overCleanMaterial: {fileID: 2100000, guid: 76e7f3072440f7c4a903f917013c685f, type: 2}
+  health: 100
+  character: {fileID: 0}
 --- !u!1 &1965025762811676912
 GameObject:
   m_ObjectHideFlags: 0
