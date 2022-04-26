@@ -123,13 +123,13 @@ public class GunScript : MonoBehaviour
     private void ShootWater()
     {
         Rigidbody p = Instantiate(projectile, bulletSpawnTransform.transform.position, fpsCamera.transform.rotation);
-        p.velocity = -transform.forward * speed;
+        p.velocity = transform.forward * speed;
     }
 
     private void ShootAR()
     {
         Rigidbody p = Instantiate(ARProjectile, bulletSpawnTransform.transform.position, fpsCamera.transform.rotation);
-        p.velocity = -transform.forward * speed;
+        p.velocity = transform.forward * speed;
     }
 
     IEnumerator Wait(float waitTime)
