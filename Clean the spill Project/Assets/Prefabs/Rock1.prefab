@@ -106,6 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5874056835733763691}
   - component: {fileID: 3733422450024613320}
+  - component: {fileID: 7819657516643980116}
   m_Layer: 0
   m_Name: Rock1
   m_TagString: Untagged
@@ -141,3 +142,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.24, y: 0.75, z: 1.39}
   m_Center: {x: 0.12, y: 0.3, z: 0.03}
+--- !u!114 &7819657516643980116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543456744162323665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oilMaterial: {fileID: 2100000, guid: 897f9c9c27c28bc459c20fbd71312e69, type: 2}
+  cleanMaterial: {fileID: 2100000, guid: 0185a8c95ebcfcc459b26262f243a76e, type: 2}
+  overCleanMaterial: {fileID: 2100000, guid: 38e1eb5b508e4724e83e29dc0826c9c8, type: 2}
+  health: 400
+  character: {fileID: 6068810823627556225, guid: 4b8d6061d93f33541993080f2801d826, type: 3}

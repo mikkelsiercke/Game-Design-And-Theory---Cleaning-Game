@@ -1739,6 +1739,7 @@ GameObject:
   - component: {fileID: 5146655973124871871}
   - component: {fileID: 4676461734196910690}
   - component: {fileID: 4676461734196910691}
+  - component: {fileID: 8217862738401017050}
   m_Layer: 0
   m_Name: Wooden Fence
   m_TagString: Untagged
@@ -1799,6 +1800,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 1, z: 3.25}
   m_Center: {x: 0, y: 0.35, z: 0}
+--- !u!114 &8217862738401017050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5487434911599053829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a59e738457f334d8d4ec3bfc3a1040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oilMaterial: {fileID: 2100000, guid: b59f9900ea033824e93a81d6cd090496, type: 2}
+  cleanMaterial: {fileID: 2100000, guid: cd8ee035b80cc964bb76780df028fbc7, type: 2}
+  overCleanMaterial: {fileID: 2100000, guid: e7b799a023c58e146a4e344647a6ae64, type: 2}
+  health: 200
+  character: {fileID: 6068810823627556225, guid: 4b8d6061d93f33541993080f2801d826, type: 3}
 --- !u!1 &5661753234453751774
 GameObject:
   m_ObjectHideFlags: 0

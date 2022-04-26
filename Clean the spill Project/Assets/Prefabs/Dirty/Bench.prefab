@@ -726,7 +726,7 @@ MonoBehaviour:
   oilMaterial: {fileID: 2100000, guid: fb08816474e4d4b4c94f2dd8cf95d2b2, type: 2}
   cleanMaterial: {fileID: 2100000, guid: 3b5168bb9337f7a409813bdb456b71f7, type: 2}
   overCleanMaterial: {fileID: 2100000, guid: 02c6d692052a34644afbb77b75138b5d, type: 2}
-  health: 100
+  health: 250
   character: {fileID: 6068810823627556225, guid: 4b8d6061d93f33541993080f2801d826, type: 3}
 --- !u!1 &4653256276026547204
 GameObject:
